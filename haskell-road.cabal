@@ -48,7 +48,27 @@ cabal-version:       >=1.10
 
 library
   -- Modules exported by the library.
-  exposed-modules:     Chapter1, Book.COR, Book.DB, Book.FAIS, Book.FCT, Book.GS, Book.Hierarchy, Book.IAR, Book.Nats, Book.POL, Book.Polynomials, Book.PowerSeries, Book.Query, Book.REL, Book.SetEq, Book.SetOrd, Book.STAL, Book.TAMO, Book.TUOLP, Book.WWN
+  exposed-modules:     Chapter1,
+                       Chapter2,
+                       Book.COR,
+                       Book.DB,
+                       Book.FAIS,
+                       Book.FCT,
+                       Book.GS,
+                       Book.Hierarchy,
+                       Book.IAR,
+                       Book.Nats,
+                       Book.POL,
+                       Book.Polynomials,
+                       Book.PowerSeries,
+                       Book.Query,
+                       Book.REL,
+                       Book.SetEq,
+                       Book.SetOrd,
+                       Book.STAL,
+                       Book.TAMO,
+                       Book.TUOLP,
+                       Book.WWN
 
   -- Modules included in this library but not exported.
   -- other-modules:

@@ -1,4 +1,5 @@
 import Chapter1Test
+import Chapter2Test
 
 import Test.HUnit
 import System.Exit (ExitCode(..), exitWith)
@@ -9,7 +10,8 @@ exitProperly m = do
   exitWith $ if failures counts /= 0 || errors counts /= 0 then ExitFailure 1 else ExitSuccess
 
 allTests::[Test]
-allTests = [Chapter1Test.itRuns]
+allTests = Chapter1Test.tests ++
+           Chapter2Test.tests
 
 main :: IO ()
 main = exitProperly (runTestTT (TestList allTests))
