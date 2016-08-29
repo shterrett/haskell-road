@@ -29,7 +29,17 @@ contradiction3Tests = [ testCase "Returns true for a contradiction" $
                                                               (c == c))
                       ]
 
+uniqueTests :: [Test]
+uniqueTests = [ testCase "Returns true if only one element satisifes pred" $
+                True @=? unique (\x -> x == 1) [1, 2, 3, 4]
+              , testCase "Returns false if no elements satisfy pred" $
+                False @=? unique (\x -> x /= x) [1, 2, 3, 4]
+              , testCase "Return false if multiple elements satisfy pred" $
+                False @=? unique (\x -> x == x) [1, 2, 3, 4]
+              ]
+
 tests :: [Test]
 tests = contradiction1Tests ++
         contradiction2Tests ++
-        contradiction3Tests
+        contradiction3Tests ++
+        uniqueTests

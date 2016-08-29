@@ -15,3 +15,8 @@ isContradiction3 :: (Bool -> Bool -> Bool -> Bool) -> Bool
 isContradiction3 p = not (or [ p a b c | a <- [True, False],
                                          b <- [True, False],
                                          c <- [True, False]])
+
+-- ex 2.51
+unique :: (a -> Bool) -> [a] -> Bool
+unique test as = (filteredLength test as) == 1
+  where filteredLength test as = length $ filter test as
