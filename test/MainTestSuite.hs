@@ -1,5 +1,6 @@
 import Chapter1Test
 import Chapter2Test
+import Chapter3Test
 
 import Test.HUnit
 import System.Exit (ExitCode(..), exitWith)
@@ -11,7 +12,8 @@ exitProperly m = do
 
 allTests::[Test]
 allTests = Chapter1Test.tests ++
-           Chapter2Test.tests
+           Chapter2Test.tests ++
+           Chapter3Test.tests
 
 main :: IO ()
 main = exitProperly (runTestTT (TestList allTests))

@@ -50,6 +50,7 @@ library
   -- Modules exported by the library.
   exposed-modules:     Chapter1,
                        Chapter2,
+                       Chapter3,
                        Book.COR,
                        Book.DB,
                        Book.FAIS,
